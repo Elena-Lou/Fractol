@@ -6,7 +6,7 @@
 /*   By: elouisia <elouisia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 15:41:45 by elouisia          #+#    #+#             */
-/*   Updated: 2022/03/23 17:35:55 by elouisia         ###   ########.fr       */
+/*   Updated: 2022/03/27 14:50:02 by elouisia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,6 @@ int	image_init(t_ptr *win)
 			&win->img.line_len, &win->img.endian);
 	win->frac.julia = 0;
 	win->frac.mandel = 0;
-	win->img.min_re = -2;
-	win->img.max_re = 1.2;
-	win->img.min_im = -1.5;
-	win->img.max_im = 1.5;
-	
-	// win->img.max_im = win->img.min_im + (win->img.max_re - win->img.min_re)
-	// 	* W_HEIGHT / W_WIDTH;
 	return (1);
 }
 

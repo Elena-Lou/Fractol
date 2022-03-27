@@ -6,7 +6,7 @@
 /*   By: elouisia <elouisia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 14:37:14 by elouisia          #+#    #+#             */
-/*   Updated: 2022/03/22 17:28:34 by elouisia         ###   ########.fr       */
+/*   Updated: 2022/03/27 14:51:11 by elouisia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,19 @@ static int	check_fractal(t_ptr *win, char **param)
 	if (ft_strcmp(param[1], "Mandelbrot") == 0)
 	{
 		win->frac.mandel = 1;
+		win->img.min_re = -2;
+		win->img.max_re = 1.2;
+		win->img.min_im = -1.5;
+		win->img.max_im = 1.5;
 		mandelbrot(win);
 	}
 	else if (ft_strcmp(param[1], "Julia") == 0)
 	{
 		win->frac.julia = 1;
+		win->img.min_re = -2;
+		win->img.max_re = 2;
+		win->img.min_im = -2;
+		win->img.max_im = 2;
 		win->maths.k_re = ft_atof(param[2]);
 		win->maths.k_im = ft_atof(param[3]);
 		julia(win);

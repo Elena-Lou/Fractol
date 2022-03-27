@@ -6,7 +6,7 @@
 /*   By: elouisia <elouisia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 15:19:53 by elouisia          #+#    #+#             */
-/*   Updated: 2022/03/27 14:29:10 by elouisia         ###   ########.fr       */
+/*   Updated: 2022/03/27 14:49:27 by elouisia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 # include "ft_printf.h"
 # include "libft.h"
 
-# define W_HEIGHT 800
-# define W_WIDTH 800
+# define W_HEIGHT 900
+# define W_WIDTH 900
 # define MAX_ITER 200
 
 typedef struct s_fractol_keys
