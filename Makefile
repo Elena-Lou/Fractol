@@ -1,6 +1,6 @@
 CC = gcc
 
-CFLAGS = -Wall -Werror -Wextra -g3 -O3 -fno-builtin -lm
+CFLAGS = -Wall -Werror -Wextra -g3 -O3 -fno-builtin
 
 NAME = fractol
 

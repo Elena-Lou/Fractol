@@ -6,7 +6,7 @@
 /*   By: elouisia <elouisia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 11:11:50 by elouisia          #+#    #+#             */
-/*   Updated: 2022/03/27 14:32:29 by elouisia         ###   ########.fr       */
+/*   Updated: 2022/03/27 15:23:13 by elouisia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,10 @@ static int	belongs_to_set(t_ptr *win, int x, int y)
 		if ((z_re * z_re) + (z_im * z_im) > 4)
 			return (0);
 		i++;
-		my_mlx_pixel_put(win, x, y, def_colour_picker(i));
+		if (win->frac.def_colour == 0)
+			my_mlx_pixel_put(win, x, y, def_colour_picker(i));
+		else
+			my_mlx_pixel_put(win, x, y, colour_switch(i, win->frac.def_colour));
 	}
 	return (1);
 }

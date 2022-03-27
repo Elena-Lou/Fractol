@@ -6,7 +6,7 @@
 /*   By: elouisia <elouisia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 15:19:53 by elouisia          #+#    #+#             */
-/*   Updated: 2022/03/27 14:49:27 by elouisia         ###   ########.fr       */
+/*   Updated: 2022/03/27 15:21:05 by elouisia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ typedef struct s_fractol_flag
 {
 	int	mandel;
 	int	julia;
+	int	def_colour;
 }	t_fractype;
 
 typedef struct s_fractol_ptr
@@ -77,10 +78,10 @@ typedef struct s_fractol_ptr
 */
 
 void	keys_init(t_ptr *win);
-int		close_window(t_ptr *win);
 int		key_check(int key, t_ptr *win);
 int		mouse_zoom(int key, int x, int y, t_ptr *win);
 void	key_moves(int key, t_ptr *win);
+void	key_colours(t_ptr *win, int key);
 
 /*
 **	utils.c
@@ -90,6 +91,7 @@ int		ft_strcmp(char *s1, char *s2);
 void	my_mlx_pixel_put(t_ptr *win, int x, int y, int color);
 int		image_init(t_ptr *win);
 double	ft_atof(char *str);
+int		close_window(t_ptr *win);
 
 /*
 **	mandel_maths.c
@@ -109,5 +111,6 @@ void	julia(t_ptr *win);
 
 int		def_colour_picker(int i);
 int		blackout(t_ptr *win);
+int		colour_switch(int i, int c);
 
 #endif
